@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# RCCG Cornerstone ATX Website and Church Admin Tools
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
