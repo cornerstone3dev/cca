@@ -31,7 +31,7 @@ const ScrollingText = styled('div')({
 const ScrollingMessage = () => {
   return (
     <ScrollingText>
-      Welcome to our Church - Join us for upcoming events and more!
+      Psalms 84:5 : They go from strength to strength, each one as they appear before you O God in Zion
     </ScrollingText>
   );
 };

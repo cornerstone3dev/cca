@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const sections = [
   { title: 'Dashboard', link: '/admin/dashboard' },
   { title: 'House Fellowship', link: '/admin/house-fellowship' },
+  { title: 'School of Deciples', link: '/admin/school-of-disciples' },
   { title: 'Sunday School', link: '/admin/sunday-school' },
   { title: 'Calendar', link: '/admin/calendar' }
 ];

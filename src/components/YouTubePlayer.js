@@ -29,7 +29,7 @@ const styles = {
     height: '30%',
     position: 'absolute',
     top: '50%',
-    left: '20%',  //adjust position to the left
+    left: '10%',  //adjust position to the left
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'black', // Optional: Add a background color
   },

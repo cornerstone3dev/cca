@@ -3,7 +3,7 @@
 // src/components/AnimatedVideoSection.js
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import './AnimatedVideoSection.css'; // Import the updated CSS file
+import '../styles/AnimatedVideoSection.css'; // Import the updated CSS file
 
 const AnimatedVideoSection = () => {
   const props = useSpring({

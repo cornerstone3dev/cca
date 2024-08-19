@@ -3,6 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Card, Typography, Avatar, Box } from '@mui/material';
 import '../styles/login.css'; // Import the CSS file
 import redeemLogo from '../assets/redeem_logo.png';
+import { styled } from '@mui/system';
+
+// import RccgAdminIcon from '../components/gear';
+const LogoContainer = styled('div')({
+  width: '70px',  // Width of the circle
+  height: '70px', // Height of the circle
+  borderRadius: '50%',
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
+const LogoImage = styled('img')({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover', // Ensures the image covers the circle
+});
+
 
 const LoginPage = ({ login }) => {
   const [username, setUsername] = useState('');
@@ -13,7 +31,7 @@ const LoginPage = ({ login }) => {
     e.preventDefault();
     try {
       await login(username, password);
-      navigate('/admin/dashboard');
+      navigate('/admin');
     } catch (error) {
       alert(error.message);
     }
@@ -25,7 +43,10 @@ const LoginPage = ({ login }) => {
         <Box className="logo-wrapper">
           <Box className="gear">
             {/* Replace with your logo path */}
-            <Avatar src={redeemLogo} className="logo" />
+            {/* <Avatar src={redeemLogo} className="logo" /> */}
+          <LogoContainer>
+          <LogoImage src={redeemLogo} />
+         </LogoContainer>
           </Box>
         </Box>
         <Typography variant="h5" component="h1" gutterBottom>

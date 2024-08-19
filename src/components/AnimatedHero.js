@@ -2,7 +2,7 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import { Container, Typography, Button } from '@mui/material';
-import './AnimatedHero.css'; // Ensure you have this CSS file
+import '../styles/AnimatedHero.css'; // Ensure you have this CSS file
 
 const AnimatedHero = () => {
   const props = useSpring({

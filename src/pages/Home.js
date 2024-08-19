@@ -1,244 +1,126 @@
 
-// src/components/LandingPage.js
+// import React from 'react';
+// import { AppBar, Toolbar, Typography, Button, Container, Grid, Paper, Box } from '@mui/material';
+// import { styled } from '@mui/material/styles';
+
+// const useStyles = styled((theme) => ({
+//   appBar: {
+//     backgroundColor: '#3f51b5',
+//     color: '#fff',
+//   },
+//   banner: {
+//     height: '60vh',
+//     background: 'url(https://your-church-banner-url.com/banner.jpg) no-repeat center center',
+//     backgroundSize: 'cover',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     color: '#fff',
+//     textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
+//   },
+//   section: {
+//     padding: theme.spacing(4, 0),
+//   },
+//   footer: {
+//     backgroundColor: '#f5f5f5',
+//     padding: theme.spacing(2),
+//     marginTop: theme.spacing(4),
+//   },
+//   button: {
+//     margin: theme.spacing(1),
+//   },
+// }));
+
+// function HomePage() {
+//   const classes = useStyles();
+
+//   return (
+//     <div>
+//       {/* Your component code */}
+//     </div>
+//   );
+// }
+
+// export default HomePage;
+
+
 import React from 'react';
-import { Container, Typography, Button, Grid, AppBar, Toolbar, IconButton } from '@mui/material';
+import { Container, Typography, AppBar, Grid } from '@mui/material';
 import { styled } from '@mui/system';
-import MenuIcon from '@mui/icons-material/Menu';
-import AnimatedHero from '../components/AnimatedHero';
 import AnimatedVideoSection from '../components/AnimatedVideoSection';
 import ScrollingMessage from '../components/ScrollingMessage';
-import EventsCarousel from '../components/EventCarousel'; // Import the carousel component
+import EventsCarousel from '../components/EventCarousel';
 import AnimatedNavbar from '../components/NavBar';
-import Announcement from '../components/Announcements';
-
-
+import AnnouncementWidget from '../components/AnnouncementPrompt';
+import CurrentTeaching from '../components/CurrentSeries';
+import announcement_prompt_data from '../data/mock_announcement_prompt_data.json';
 
 const HomePageContainer = styled('div')({
   position: 'relative',
   width: '100%',
-  height: '100vh', // Full viewport height
-  backgroundColor: '#f5f5f5', // Set your current background color or image here
+  height: '100vh',
+  backgroundColor: '#f5f5f5',
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
+  flexDirection: 'row',
   overflow: 'hidden',
-
-  // Logo as background
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundImage: 'url("../assets/redeem_logo.png")', // Replace with your logo URL
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
-    opacity: 0.2, // Adjust for transparency (0 is fully transparent, 1 is fully opaque)
-    backgroundBlendMode: 'overlay', // Blends the logo with the background
-    zIndex: 1,
-  },
 });
-
-const Content = styled('div')({
-  position: 'relative',
-  zIndex: 2, // Ensures content is above the background image
-  color: '#333',
-});
-
 
 const Navbar = styled(AppBar)({
   backgroundColor: '#333',
   padding: '0 1rem',
 });
 
-const Section = styled(Container)({
+const LeftSidebar = styled('div')({
+  width: '250px',
+  height: '100vh',
+  overflowY: 'auto',
+  backgroundColor: '#f0f0f0',
+  borderRight: '1px solid #ddd',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '1rem',
+});
+
+const MainContent = styled('div')({
+  flex: 1,
   padding: '2rem',
+  overflowY: 'auto',
+  height: 'calc(100vh - 64px)',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+});
+
+const VideoAndTeachingSection = styled(Grid)({
+  display: 'flex',
+  gap: '1rem',
 });
 
 const LandingPage = () => {
+  // Extract messages only once and pass them to the widget
+  const announcements = announcement_prompt_data.map((ann) => ann.message);
+
   return (
-    <div>
- 
-      {/* Navbar */}
+    <HomePageContainer>
+      <MainContent>
         <AnimatedNavbar />
+        
+        <VideoAndTeachingSection container spacing={2}>
+          <Grid item xs={12} sm={8}>
+            <AnimatedVideoSection />
+          </Grid>
+         
+        </VideoAndTeachingSection>
+        
+        <Container id="events">
+          <Typography variant="h3" gutterBottom>Upcoming Events</Typography>
+          <EventsCarousel />
+        </Container>
 
-      {/* Animated Hero Section */}
-      {/* <AnimatedHero /> */}
-
-      {/* Animated Video Section */}
- 
-      <AnimatedVideoSection />
-      <Announcement />
-      {/* Events Carousel Section */}
-      <Section id="events">
-        <Typography variant="h3" gutterBottom>Upcoming Events</Typography>
-        <EventsCarousel />
-      </Section>
-
-      {/* About Us Section */}
-      <Section>
-        <Typography variant="h3" gutterBottom>About Us</Typography>
-        <Typography paragraph>
-          We are a community dedicated to spreading love and faith. Our mission is to...
-        </Typography>
-        <Button variant="outlined" color="primary" href="#contact">Contact Us</Button>
-      </Section>
-
-      {/* Community Highlights Section */}
-      <Section>
-        <Typography variant="h3" gutterBottom>Community Highlights</Typography>
-        <Typography paragraph>
-          Hear from our members and see what makes our community special...
-        </Typography>
-        {/* Add testimonials or photo gallery here */}
-      </Section>
-
-      {/* Contact Section */}
-      <Section id="contact">
-        <Typography variant="h3" gutterBottom>Contact Us</Typography>
-        <Typography paragraph>
-          If you have any questions or need assistance, please reach out to us...
-        </Typography>
-        {/* Add contact form here */}
-      </Section>
-
-      {/* Scrolling Text */}
-      <ScrollingMessage />
-     
-      </div>
-      
+        <ScrollingMessage />
+      </MainContent>
+    </HomePageContainer>
   );
 };
 
 export default LandingPage;
-
-
-// // src/components/LandingPage.js
-// import React from 'react';
-// import { Container, Typography, Button, Grid, Card, CardContent, AppBar, Toolbar, IconButton } from '@mui/material';
-// import { styled } from '@mui/system';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import AnimatedHero from '../components/AnimatedHero';
-// import AnimatedVideoSection from '../components/AnimatedVideoSection';
-// import ScrollingMessage from '../components/ScrollingMessage';
-
-// const Navbar = styled(AppBar)({
-//   backgroundColor: '#333',
-//   padding: '0 1rem',
-// });
-
-// const Section = styled(Container)({
-//   padding: '2rem',
-// });
-
-// const CardStyled = styled(Card)({
-//   margin: '1rem',
-//   transition: 'transform 0.3s ease',
-//   '&:hover': {
-//     transform: 'scale(1.05)',
-//   },
-// });
-
-// const LandingPage = () => {
-//   return (
-//     <div>
-//       {/* Navbar */}
-//       <Navbar position="static">
-//         <Toolbar>
-//           <IconButton edge="start" color="inherit" aria-label="menu">
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-//             RCCG Cornerstone Church 
-//           </Typography>
-//           <Button color="inherit">Home</Button>
-//           <Button color="inherit" href="#events">Events</Button>
-//           <Button color="inherit" href="#contact">Contact</Button>
-//         </Toolbar>
-//       </Navbar>
-
-//       {/* Animated Hero Section */}
-//       <AnimatedHero />
-
-//       {/* Animated Video Section */}
-//       <AnimatedVideoSection />
-
-//       {/* About Us Section */}
-//       <Section>
-//         <Typography variant="h3" gutterBottom>About Us</Typography>
-//         <Typography paragraph>
-//           We are a community dedicated to spreading love and faith. Our mission is to...
-//         </Typography>
-//         <Button variant="outlined" color="primary" href="#contact">Contact Us</Button>
-//       </Section>
-
-//       {/* Upcoming Events Section */}
-//       <Section id="events">
-//         <Typography variant="h3" gutterBottom>Upcoming Events</Typography>
-//         <Grid container spacing={2}>
-//           <Grid item xs={12} sm={6} md={4}>
-//             <CardStyled>
-//               <CardContent>
-//                 <Typography variant="h5">Celebration Service</Typography>
-//                 <Typography>Date: August 20, 2024</Typography>
-//                 <Typography>Time: 10:00 AM</Typography>
-//                 <Button variant="contained" color="secondary">Learn More</Button>
-//               </CardContent>
-//               <CardContent>
-//                 <Typography variant="h5">Sunday School</Typography>
-//                 <Typography>Date: August 21, 2024</Typography>
-//                 <Typography>Time: 10:00 AM</Typography>
-//                 <Button variant="contained" color="secondary">Learn More</Button>
-//               </CardContent>
-//               <CardContent>
-//                 <Typography variant="h5">Bible Study</Typography>
-//                 <Typography>Date: August 21, 2024</Typography>
-//                 <Typography>Time: 10:00 AM</Typography>
-//                 <Button variant="contained" color="secondary">Learn More</Button>
-//               </CardContent>
-//               <CardContent>
-//                 <Typography variant="h5">Prayer Meeting </Typography>
-//                 <Typography>Date: August 21, 2024</Typography>
-//                 <Typography>Time: 10:00 AM</Typography>
-//                 <Button variant="contained" color="secondary">Learn More</Button>
-//               </CardContent>
-//               <CardContent>
-//                 <Typography variant="h5">Commanding The Day</Typography>
-//                 <Typography>Date: August 21, 2024</Typography>
-//                 <Typography>Time: 10:00 AM</Typography>
-//                 <Button variant="contained" color="secondary">Learn More</Button>
-//               </CardContent>
-//             </CardStyled>
-//           </Grid>
-//           {/* Add more event cards as needed */}
-//         </Grid>
-//       </Section>
-
-//       {/* Community Highlights Section */}
-//       <Section>
-//         <Typography variant="h3" gutterBottom>Community Highlights</Typography>
-//         <Typography paragraph>
-//           Hear from our members and see what makes our community special...
-//         </Typography>
-//         {/* Add testimonials or photo gallery here */}
-//       </Section>
-
-//       {/* Contact Section */}
-//       <Section id="contact">
-//         <Typography variant="h3" gutterBottom>Contact Us</Typography>
-//         <Typography paragraph>
-//           If you have any questions or need assistance, please reach out to us...
-//         </Typography>
-//         {/* Add contact form here */}
-//       </Section>
-
-//       {/* Scrolling Text */}
-//       <ScrollingMessage />
-//     </div>
-//   );
-// };
-
-// export default LandingPage;
