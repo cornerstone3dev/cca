@@ -19,12 +19,12 @@ import Test8 from './pages/test8';
 import Test9 from './pages/test9';
 
 
-import { login, logout, isAuthenticated,useAutoLogout } from './services/auth';
+import { login, logout, isAuthenticated, useAutoLogout } from './services/auth';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 const App = () => {
   const [auth, setAuth] = useState(isAuthenticated()); // Initialize state based on local storage
-  
+
   const handleLogin = async (username, password) => {
     try {
       const token = await login(username, password);
@@ -49,7 +49,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Test9 />} />
+        <Route path="/cca" element={<Test9 />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/test1" element={<Test1 />} />
         <Route path="/test2" element={<Test2 />} />
