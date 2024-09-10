@@ -5,7 +5,8 @@ import { styled } from '@mui/system';
 import { useSpring, animated } from '@react-spring/web';
 import church_logo from '../assets/redeem_logo.png';
 import TestimonyModal from './TestimonyModal'; // Import your modal component
-import { publish_testimony } from '../services/testimony_service'; 
+import { publish_testimony } from '../services/testimony_service';
+import './../css/NavBar.css';
 
 // Create a styled component for the logo container
 const LogoContainer = styled('div')({
@@ -76,55 +77,71 @@ const AnimatedNavbar = () => {
   };
 
   return (
-    <animated.div style={props}>
-      <Navbar position="static">
-        <NavbarContent>
-          <LogoContainer>
-            <LogoImage src={church_logo} />
-          </LogoContainer>
-          <Typography variant="h6" sx={{ flexGrow: 1, marginLeft: '1rem' }}>
-            RCCG Cornerstone Church, Austin, TX
-          </Typography>
-          <div>
-            <Button color="inherit" href="/messages">Messages</Button>
-            <Button color="inherit" href="/give">Give</Button>
-            <Button color="inherit" onClick={handleConnectClick}>Connect</Button>
-            <Button color="inherit" onClick={handleEventsClick}>Events</Button>
-            <Button color="inherit" onClick={() => setModalOpen(true)}>Testimonies</Button>
-            <Button color="inherit" href="/gallery">Gallery</Button>
-            <Button color="inherit" href="#events">Manage</Button>
-            <IconButton edge="start" color="inherit" aria-label="menu" >
-              <MenuIcon />
-            </IconButton>
-            {/* Connect Dropdown Menu */}
-            <Menu
-              anchorEl={anchorElConnect}
-              open={openConnect}
-              onClose={handleMenuClose}
-              MenuListProps={{ 'aria-labelledby': 'connect-button' }}
-            >
-              <MenuItem onClick={handleMenuClose}>Contact Us</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Volunteer</MenuItem>
-            </Menu>
-            {/* Events Dropdown Menu */}
-            <Menu
-              anchorEl={anchorElEvents}
-              open={openEvents}
-              onClose={handleMenuClose}
-              MenuListProps={{ 'aria-labelledby': 'events-button' }}
-            >
-              <MenuItem onClick={handleMenuClose}>Upcoming Events</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Past Events</MenuItem>
-            </Menu>
-          </div>
-        </NavbarContent>
-      </Navbar>
-      <TestimonyModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        onSubmit={handleTestimonySubmit}
-      />
-    </animated.div>
+    // <animated.div style={props}>
+    //   <Navbar position="static">
+    //     <NavbarContent>
+    //       <LogoContainer>
+    //         <LogoImage src={church_logo} />
+    //       </LogoContainer>
+    //       <Typography variant="h6" sx={{ flexGrow: 1, marginLeft: '1rem' }}>
+    //         RCCG Cornerstone Church, Austin, TX
+    //       </Typography>
+    //       <div>
+    //         <Button color="inherit" href="/messages">Messages</Button>
+    //         <Button color="inherit" href="/give">Give</Button>
+    //         <Button color="inherit" onClick={handleConnectClick}>Connect</Button>
+    //         <Button color="inherit" onClick={handleEventsClick}>Events</Button>
+    //         <Button color="inherit" onClick={() => setModalOpen(true)}>Testimonies</Button>
+    //         <Button color="inherit" href="/gallery">Gallery</Button>
+    //         <Button color="inherit" href="#events">Manage</Button>
+    //         <IconButton edge="start" color="inherit" aria-label="menu" >
+    //           <MenuIcon />
+    //         </IconButton>
+    //         {/* Connect Dropdown Menu */}
+    //         <Menu
+    //           anchorEl={anchorElConnect}
+    //           open={openConnect}
+    //           onClose={handleMenuClose}
+    //           MenuListProps={{ 'aria-labelledby': 'connect-button' }}
+    //         >
+    //           <MenuItem onClick={handleMenuClose}>Contact Us</MenuItem>
+    //           <MenuItem onClick={handleMenuClose}>Volunteer</MenuItem>
+    //         </Menu>
+    //         {/* Events Dropdown Menu */}
+    //         <Menu
+    //           anchorEl={anchorElEvents}
+    //           open={openEvents}
+    //           onClose={handleMenuClose}
+    //           MenuListProps={{ 'aria-labelledby': 'events-button' }}
+    //         >
+    //           <MenuItem onClick={handleMenuClose}>Upcoming Events</MenuItem>
+    //           <MenuItem onClick={handleMenuClose}>Past Events</MenuItem>
+    //         </Menu>
+    //       </div>
+    //     </NavbarContent>
+    //   </Navbar>
+    //   <TestimonyModal
+    //     open={modalOpen}
+    //     onClose={() => setModalOpen(false)}
+    //     onSubmit={handleTestimonySubmit}
+    //   />
+    // </animated.div>
+    <header className='header'>
+      <div className='rccg-logo-container'>
+        <img className="rccg-logo" src={church_logo}/>
+      </div>
+
+      <nav className='nav-bar'>
+        <a href='/'>Home</a>
+        <a href='/messages'>Messages</a>
+        <a href='/give'>Give</a>
+        <a href='/'>Connect</a>
+        <a href='/'>Events</a>
+        <a href='/'>Testimonies</a>
+        <a href='/gallery'>Gallery</a>
+        <a href='#events'>Manage</a>
+      </nav>
+    </header>
   );
 };
 

@@ -54,6 +54,8 @@ import AnimatedNavbar from '../components/NavBar';
 import AnnouncementWidget from '../components/AnnouncementPrompt';
 import CurrentTeaching from '../components/CurrentSeries';
 import announcement_prompt_data from '../data/mock_announcement_prompt_data.json';
+import './../css/Home.css';
+import BackGroundVideo from './../media/videos/building_theme.mp4'
 
 const HomePageContainer = styled('div')({
   position: 'relative',
@@ -101,26 +103,23 @@ const LandingPage = () => {
   const announcements = announcement_prompt_data.map((ann) => ann.message);
 
   return (
-    <HomePageContainer>
-      <MainContent>
-        <AnimatedNavbar />
-        
-        <VideoAndTeachingSection container spacing={2}>
-          <Grid item xs={12} sm={8}>
-            <AnimatedVideoSection />
-          </Grid>
-         
-        </VideoAndTeachingSection>
-        
-        <Container id="events">
-          <Typography variant="h3" gutterBottom>Upcoming Events</Typography>
-          <EventsCarousel />
-        </Container>
+    <div className="landingpage">
+        <video src={BackGroundVideo} autoPlay muted loop className="video-bg" />
+        <div className="bg-overlay"></div>
 
-        <ScrollingMessage />
-      </MainContent>
-    </HomePageContainer>
-  );
+        <div>
+          <AnimatedNavbar/>
+        </div>
+
+        <div className="home-text">
+            <h2>Welcome to Cornerstone Church</h2>
+            <p className='paragraph'>A non-denominational. dynamic and inspirational church.</p>
+        </div>
+
+        {/* <div className="home-btn">Explore</div> */}
+
+    </div>
+  )
 };
 
 export default LandingPage;
