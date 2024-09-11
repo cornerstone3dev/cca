@@ -6,14 +6,13 @@ import Admin from './pages/AdminLandingPage';
 import Dashboard from './pages/Dashboard';
 import LoginPage from './pages/LoginPage';
 import LogoutPage from './pages/LogoutPage';
-
 import { login, logout, isAuthenticated,useAutoLogout } from './services/auth';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const App = () => {
   const [auth, setAuth] = useState(isAuthenticated()); // Initialize state based on local storage
-  
+
   const handleLogin = async (username, password) => {
     try {
       const token = await login(username, password);
