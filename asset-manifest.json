@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cca/static/css/main.ffe6b47d.css",
-    "main.js": "/cca/static/js/main.9ef1fb4e.js",
+    "main.css": "/cca/static/css/main.63cc0b39.css",
+    "main.js": "/cca/static/js/main.b4888b68.js",
     "reactPlayerYouTube.js": "/cca/static/js/reactPlayerYouTube.7c8d84ce.chunk.js",
     "reactPlayerSoundCloud.js": "/cca/static/js/reactPlayerSoundCloud.e01560cd.chunk.js",
     "reactPlayerVimeo.js": "/cca/static/js/reactPlayerVimeo.6fbecf68.chunk.js",
@@ -17,14 +17,16 @@
     "reactPlayerFilePlayer.js": "/cca/static/js/reactPlayerFilePlayer.af62220a.chunk.js",
     "reactPlayerPreview.js": "/cca/static/js/reactPlayerPreview.9d9abfca.chunk.js",
     "static/js/453.c26ea71b.chunk.js": "/cca/static/js/453.c26ea71b.chunk.js",
+    "static/media/building_theme.mp4": "/cca/static/media/building_theme.b59612a7cf25263d242b.mp4",
     "static/media/redeem_logo.png": "/cca/static/media/redeem_logo.5d63b5f43439c4157b34.png",
+    "static/media/Merianda.ttf": "/cca/static/media/Merianda.c1220afcf0cceab9bd8b.ttf",
     "static/media/slick.svg": "/cca/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/cca/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/cca/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cca/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cca/index.html",
-    "main.ffe6b47d.css.map": "/cca/static/css/main.ffe6b47d.css.map",
-    "main.9ef1fb4e.js.map": "/cca/static/js/main.9ef1fb4e.js.map",
+    "main.63cc0b39.css.map": "/cca/static/css/main.63cc0b39.css.map",
+    "main.b4888b68.js.map": "/cca/static/js/main.b4888b68.js.map",
     "reactPlayerYouTube.7c8d84ce.chunk.js.map": "/cca/static/js/reactPlayerYouTube.7c8d84ce.chunk.js.map",
     "reactPlayerSoundCloud.e01560cd.chunk.js.map": "/cca/static/js/reactPlayerSoundCloud.e01560cd.chunk.js.map",
     "reactPlayerVimeo.6fbecf68.chunk.js.map": "/cca/static/js/reactPlayerVimeo.6fbecf68.chunk.js.map",
@@ -42,7 +44,7 @@
     "453.c26ea71b.chunk.js.map": "/cca/static/js/453.c26ea71b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffe6b47d.css",
-    "static/js/main.9ef1fb4e.js"
+    "static/css/main.63cc0b39.css",
+    "static/js/main.b4888b68.js"
   ]
 }
