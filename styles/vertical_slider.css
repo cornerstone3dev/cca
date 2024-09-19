@@ -1,0 +1,42 @@
+/* src/VerticalSliderWithCards.css */
+
+.vertical-slider-container {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+  }
+  
+  .vertical-slider-container::-webkit-scrollbar {
+    width: 8px; /* For Chrome, Safari, and Edge */
+  }
+  
+  .vertical-slider-container::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  .vertical-slider-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .slider-thumb {
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  
+/* .vertical-slider-container {
+    height: 400px;
+    width: 250px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-item {
+    margin-bottom: 10px;
+  }
+   */

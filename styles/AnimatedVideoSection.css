@@ -1,0 +1,15 @@
+/* src/components/AnimatedVideoSection.css */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .video-frame {
+    width: 100%;
+    max-width: 560px; /* Adjust as needed */
+    height: 415px; /* Adjust as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
