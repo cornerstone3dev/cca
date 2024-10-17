@@ -4,6 +4,7 @@ import { TextField, Button, Card, Typography, Avatar, Box } from '@mui/material'
 import '../styles/login.css'; // Import the CSS file
 import redeemLogo from '../assets/redeem_logo.png';
 import { styled } from '@mui/system';
+import { Person, Lock } from '@mui/icons-material';
 
 // import RccgAdminIcon from '../components/gear';
 const LogoContainer = styled('div')({
@@ -38,56 +39,79 @@ const LoginPage = ({ login }) => {
   };
 
   return (
-    <div className="login-container">
-      <Card className="login-card">
-        <Box className="logo-wrapper">
-          <Box className="gear">
-            {/* Replace with your logo path */}
-            {/* <Avatar src={redeemLogo} className="logo" /> */}
-          <LogoContainer>
-          <LogoImage src={redeemLogo} />
-         </LogoContainer>
-          </Box>
-        </Box>
-        <Typography variant="h5" component="h1" gutterBottom>
-          Cornerstone Church Austin Login
-        </Typography>
-        <form className="login-form" onSubmit={handleSubmit}>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="username"
-            label="Username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className="login-submit"
-          >
-            Login
-          </Button>
-        </form>
-      </Card>
+    // <div className="login-container">
+    //   <Card className="login-card">
+    //     <Box className="logo-wrapper">
+    //       <Box className="gear">
+    //         {/* Replace with your logo path */}
+    //         {/* <Avatar src={redeemLogo} className="logo" /> */}
+    //       <LogoContainer>
+    //       <LogoImage src={redeemLogo} />
+    //      </LogoContainer>
+    //       </Box>
+    //     </Box>
+    //     <Typography variant="h5" component="h1" gutterBottom>
+    //       Cornerstone Church Austin Login
+    //     </Typography>
+    //     <form className="login-form" onSubmit={handleSubmit}>
+    //       <TextField
+    //         variant="outlined"
+    //         margin="normal"
+    //         required
+    //         fullWidth
+    //         id="username"
+    //         label="Username"
+    //         name="username"
+    //         value={username}
+    //         onChange={(e) => setUsername(e.target.value)}
+    //         autoFocus
+    //       />
+    //       <TextField
+    //         variant="outlined"
+    //         margin="normal"
+    //         required
+    //         fullWidth
+    //         name="password"
+    //         label="Password"
+    //         type="password"
+    //         id="password"
+    //         value={password}
+    //         onChange={(e) => setPassword(e.target.value)}
+    //       />
+    //       <Button
+    //         type="submit"
+    //         fullWidth
+    //         variant="contained"
+    //         color="primary"
+    //         className="login-submit"
+    //       >
+    //         Login
+    //       </Button>
+    //     </form>
+    //   </Card>
+    // </div>
+
+    <div className='wrapper'>
+      <form action=''>
+        <h1>Login</h1>
+        <div className='input-box'>
+          <input type='text' placeholder='Username' required/>
+          <Person className='icon' />
+        </div>
+        <div className='input-box'>
+          <input type='password' placeholder='Password' required/>
+          <Lock className='icon' />
+        </div>
+        <div className='remember-forgot'>
+          <label><input type='checkbox' />Remember me</label>
+          <a href='#'>Forgot password?</a>
+        </div>
+
+        <button type='submit'>Login</button>
+        <div className='register-link'>
+          <p>Don't have an account <a href='#'>Register</a></p>
+        </div>
+      </form>
     </div>
   );
 };
