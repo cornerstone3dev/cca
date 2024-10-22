@@ -92,14 +92,14 @@ const LoginPage = ({ login }) => {
     // </div>
 
     <div className='wrapper'>
-      <form action=''>
+      <form action='' onSubmit={handleSubmit}>
         <h1>Login</h1>
         <div className='input-box'>
-          <input type='text' placeholder='Username' required/>
+          <input type='text' placeholder='Username' required onChange={(e) => setUsername(e.target.value)} value={username}/>
           <Person className='icon' />
         </div>
         <div className='input-box'>
-          <input type='password' placeholder='Password' required/>
+          <input type='password' placeholder='Password' required onChange={(e) => setPassword(e.target.value)} value={password}/>
           <Lock className='icon' />
         </div>
         <div className='remember-forgot'>
