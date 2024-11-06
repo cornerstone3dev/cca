@@ -77,7 +77,7 @@ const AnimatedNavbar = () => {
 
   return (
     <animated.div style={props}>
-      <Navbar position="static">
+      <Navbar position="fixed">
         <NavbarContent>
           <LogoContainer>
             <LogoImage src={church_logo} />

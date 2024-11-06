@@ -1,11 +1,9 @@
 /* src/pages/LoginPage.css */
 
-
-
-
 /* login.css */
 
 .login-container {
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,14 +26,11 @@
   margin-bottom: 16px;
 }
 
-
-  .logo {
-    object-fit: cover; /* Ensures the image covers the entire Avatar area */
-    width: 120%;       /* Ensures the image fits the Avatar */
-    height: 120%;      /* Ensures the image fits the Avatar */
-  }
-
-
+.logo {
+  object-fit: cover; /* Ensures the image covers the entire Avatar area */
+  width: 120%; /* Ensures the image fits the Avatar */
+  height: 120%; /* Ensures the image fits the Avatar */
+}
 
 .gear {
   width: 80px;
@@ -57,6 +52,14 @@
   margin-top: 24px;
 }
 
+.admin-access {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.forgot-password {
+  padding-top: 10px;
+}
 
 /* .login-container {
   display: flex;
@@ -79,8 +82,7 @@
   text-align: center;
 }  */
 
-
- /* .login-container {
+/* .login-container {
   background: repeating-linear-gradient(
     45deg,
     #f0f0f0,
@@ -107,8 +109,6 @@
   text-align: center;
 } */
 
- 
-
 .login-form h1 {
   margin-bottom: 20px;
 }
@@ -118,10 +118,15 @@
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #555; /* Darker border for better visibility in dark mode */
+  /*border: 1px solid #555;*/ /* Darker border for better visibility in dark mode */
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background for inputs */
-  color: #fff; /* White text color for inputs */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slightly transparent background for inputs */
+  color: #000000; /* White text color for inputs */ /*changed from #fff to #000000; was not appearing on white*/
 }
 
 .login-form button {
@@ -129,18 +134,19 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #ff6f00;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
 }
 
 .login-form button:hover {
-  background-color: #0056b3;
+  background-color: #ff8f00;
 }
 
-
-
+.login-form a {
+  text-decoration: none;
+}
 
 /* .login-container {
     display: flex;
