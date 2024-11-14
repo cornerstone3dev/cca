@@ -92,7 +92,7 @@ const AnimatedNavbar = () => {
             <Button color="inherit" onClick={handleEventsClick}>Events</Button>
             <Button color="inherit" onClick={() => setModalOpen(true)}>Testimonies</Button>
             <Button color="inherit" href="/gallery">Gallery</Button>
-            <Button color="inherit" href="#events">Manage</Button>
+            <Button color="inherit" href="/login">Manage</Button>
             <IconButton edge="start" color="inherit" aria-label="menu" >
               <MenuIcon />
             </IconButton>
