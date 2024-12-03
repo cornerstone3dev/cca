@@ -58,6 +58,7 @@ const CustomCarousel = () => {
                 open={openModal}
                 onClose={() => setOpenModal(false)}
                 title={futureEvents[currentIndex].title}
+                date={futureEvents[currentIndex].date}
                 time={futureEvents[currentIndex].time}
                 location={
                   <div
