@@ -28,6 +28,13 @@ const CustomCarousel = () => {
     return text;
   };
 
+  const handleOpenModal = (id) => {
+    const eventIndex = futureEvents.findIndex((event) => event.id === id);
+    setCurrentIndex(eventIndex);
+    setOpenModal(true);
+  };
+  
+
   return (
     <div className="carousel-container">
       <button className="carousel-button prev" onClick={handlePrev}>
@@ -38,7 +45,7 @@ const CustomCarousel = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {futureEvents.map((slide) => (
-          <div key={slide.id} className="carousel-item">
+          <div key={slide.id} className="carousel-item" data-testid={`carousel-slide-${slide.id}`}>
             <div className="carousel-content">
               <h1>{slide.title}</h1>
               <p>{truncateText(slide.description, 100)}</p>
@@ -49,12 +56,16 @@ const CustomCarousel = () => {
               <Button
                 variant="contained"
                 color="warning"
+                data-testid={`learn-more-button-${slide.id}`}
                 sx={{ borderRadius: "20px" }}
-                onClick={() => setOpenModal(true)}
+                onClick={() => handleOpenModal(slide.id)}
               >
                 Learn More
               </Button>
-              <EventModal
+              {currentIndex === slide.id && openModal && (
+                <EventModal
+                id={slide.id}
+                data-testid={`modal-${slide.id}`}
                 open={openModal}
                 onClose={() => setOpenModal(false)}
                 title={futureEvents[currentIndex].title}
@@ -72,12 +83,14 @@ const CustomCarousel = () => {
                   <Button
                     variant="contained"
                     color="warning"
+                    data-testid={`close-button-${slide.id}`}
                     onClick={() => setOpenModal(false)}
                   >
                     Close
                   </Button>
                 }
               />
+              )}
             </div>
           </div>
         ))}

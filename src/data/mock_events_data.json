@@ -2,7 +2,7 @@
   {
     "futureEvents": [
       {
-        "id": 1,
+        "id": 0,
         "title": "Workers Appreciation Event",
         "date": "Sat. Dec 7, 2024",
         "time": "5:00 PM",
@@ -16,7 +16,7 @@
         "description": "Join us to celebrate and appreciate our amazing team for their hard work and dedication throughout the year. This special evening will include a delicious dinner, engaging activities, and heartfelt acknowledgments of everyone's contributions."
       },
       {
-        "id": 2,
+        "id": 1,
         "title": "Ignite Austin",
         "date": "Fri. Dec 13, 2024",
         "time": "7:30 PM",
@@ -30,7 +30,7 @@
         "description": "Experience a night of electrifying music, fun-filled activities, and connection at Ignite Austin. This event brings together vibrant communities to celebrate creativity, passion, and unity in the heart of the city."
       },
       {
-        "id": 3,
+        "id": 2,
         "title": "Jazz Night",
         "date": "Fri. Dec 20, 2024",
         "time": "7:00 PM",
@@ -91,7 +91,7 @@
       {
         "id": 4,
         "title": "Church Building Dedication",
-        "date": "Sun. Jul 4, 202",
+        "date": "Sun. Jul 4, 2024",
         "time": "10:00 AM",
         "location": {
           "name": "Cornerstone Church",
