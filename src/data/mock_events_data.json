@@ -1,0 +1,54 @@
+
+[
+    {
+        "futureEvents": [
+            {
+                "id": 1,
+                "title": "Workers Appreciation Event",
+                "date": "Sat. Dec 7, 2024",
+                "time": "5:00 PM",
+                "location": {
+                    "name": "Wingate by Wyndham Round Rock Hotel",
+                    "address": "1209 N Interstate Hwy 35",
+                    "city": "Round Rock",
+                    "state": "TX",
+                    "zip": "78664"
+                },
+                "description": "Join us to celebrate and appreciate our amazing team for their hard work and dedication throughout the year. This special evening will include a delicious dinner, engaging activities, and heartfelt acknowledgments of everyone's contributions.",
+                "link": "www.google.com"
+              },
+              {
+                "id": 2,
+                "title": "Ignite Austin",
+                "date": "Fri. Dec 13, 2024",
+                "time": "7:30 PM",
+                "location": {
+                    "name": "Cornerstone Church",
+                    "address": "9303 Cameron Rd",
+                    "city": "Austin",
+                    "state": "TX",
+                    "zip": "78754"
+                },
+                "description": "Experience a night of electrifying music, fun-filled activities, and connection at Ignite Austin. This event brings together vibrant communities to celebrate creativity, passion, and unity in the heart of the city.",
+                "link": "www.google.com"
+              },
+              {
+                "id": 3,
+                "title": "Jazz Night",
+                "date": "Fri. Dec 20, 2024",
+                "time": "7:00 PM",
+                "location": {
+                    "name": "Cornerstone Church",
+                    "address": "9303 Cameron Rd",
+                    "city": "Austin",
+                    "state": "TX",
+                    "zip": "78754"
+                },
+                "description": "Unwind and enjoy an evening of smooth jazz and live performances. Jazz Night promises a sophisticated atmosphere, exquisite tunes, and a chance to connect with fellow music lovers in a relaxed setting.",
+                "link": "www.google.com"
+              }
+        ]
+    }
+  ]
+  
+  

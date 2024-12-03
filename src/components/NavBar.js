@@ -50,15 +50,15 @@ const AnimatedNavbar = () => {
   const [anchorElConnect, setAnchorElConnect] = useState(null);
   const [anchorElEvents, setAnchorElEvents] = useState(null);
   const openConnect = Boolean(anchorElConnect);
-  const openEvents = Boolean(anchorElEvents);
+  // const openEvents = Boolean(anchorElEvents);
 
   const handleConnectClick = (event) => {
     setAnchorElConnect(event.currentTarget);
   };
 
-  const handleEventsClick = (event) => {
-    setAnchorElEvents(event.currentTarget);
-  };
+  // const handleEventsClick = (event) => {
+  //   setAnchorElEvents(event.currentTarget);
+  // };
 
   const handleMenuClose = () => {
     setAnchorElConnect(null);
@@ -89,7 +89,7 @@ const AnimatedNavbar = () => {
             <Button color="inherit" href="/messages">Messages</Button>
             <Button color="inherit" href="/give">Give</Button>
             <Button color="inherit" onClick={handleConnectClick}>Connect</Button>
-            <Button color="inherit" onClick={handleEventsClick}>Events</Button>
+            <Button color="inherit" href="/events">Events</Button>
             <Button color="inherit" onClick={() => setModalOpen(true)}>Testimonies</Button>
             <Button color="inherit" href="/gallery">Gallery</Button>
             <Button color="inherit" href="/login">Manage</Button>
@@ -106,8 +106,8 @@ const AnimatedNavbar = () => {
               <MenuItem onClick={handleMenuClose}>Contact Us</MenuItem>
               <MenuItem onClick={handleMenuClose}>Volunteer</MenuItem>
             </Menu>
-            {/* Events Dropdown Menu */}
-            <Menu
+            {/* Events Dropdown Menu - not needed with new implementation */}
+            {/* <Menu
               anchorEl={anchorElEvents}
               open={openEvents}
               onClose={handleMenuClose}
@@ -115,7 +115,7 @@ const AnimatedNavbar = () => {
             >
               <MenuItem onClick={handleMenuClose}>Upcoming Events</MenuItem>
               <MenuItem onClick={handleMenuClose}>Past Events</MenuItem>
-            </Menu>
+            </Menu> */}
           </div>
         </NavbarContent>
       </Navbar>

@@ -5,6 +5,7 @@ import HomePage2 from './pages/Home';
 import Messages from './pages/Messages';
 import Admin from './pages/AdminLandingPage';
 import Dashboard from './pages/Dashboard';
+import Events from './pages/Events';
 import LoginPage from './pages/LoginPage';
 import LogoutPage from './pages/LogoutPage';
 
@@ -71,6 +72,11 @@ const App = () => {
           path="/admin/dashboard"
           element={auth ? <Dashboard /> : <Navigate to="/login" />}
         />
+        <Route
+          path="/events"
+          element={<Events />}
+        />
+        <Route path="/" element={<HomePage2 />} />
       </Routes>
     </Router>
   );
