@@ -1,15 +1,25 @@
-.carousel-background {
-    height: 50%;
+.carousel {
+    left: 0;
     width: 100%;
+    height: 50%;
     background-image: url('../assets/event-background4.png');
-    position: absolute;
 }
 .overlay {
-    position: fixed;
-    top: 64px;
+    position: absolute;
     left: 0;
     width: 100%;
     height: 50%;
     z-index: 0;
     background-color: rgba(0, 0, 0, 0.7); /* Adjust for content readability */
   }
+
+.past-events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 50px;
+
+    h2 {
+        font-size: xx-large;
+    }
+}
