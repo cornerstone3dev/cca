@@ -1,54 +1,303 @@
-
 [
-    {
-        "futureEvents": [
-            {
-                "id": 1,
-                "title": "Workers Appreciation Event",
-                "date": "Sat. Dec 7, 2024",
-                "time": "5:00 PM",
-                "location": {
-                    "name": "Wingate by Wyndham Round Rock Hotel",
-                    "address": "1209 N Interstate Hwy 35",
-                    "city": "Round Rock",
-                    "state": "TX",
-                    "zip": "78664"
-                },
-                "description": "Join us to celebrate and appreciate our amazing team for their hard work and dedication throughout the year. This special evening will include a delicious dinner, engaging activities, and heartfelt acknowledgments of everyone's contributions.",
-                "link": "www.google.com"
-              },
-              {
-                "id": 2,
-                "title": "Ignite Austin",
-                "date": "Fri. Dec 13, 2024",
-                "time": "7:30 PM",
-                "location": {
-                    "name": "Cornerstone Church",
-                    "address": "9303 Cameron Rd",
-                    "city": "Austin",
-                    "state": "TX",
-                    "zip": "78754"
-                },
-                "description": "Experience a night of electrifying music, fun-filled activities, and connection at Ignite Austin. This event brings together vibrant communities to celebrate creativity, passion, and unity in the heart of the city.",
-                "link": "www.google.com"
-              },
-              {
-                "id": 3,
-                "title": "Jazz Night",
-                "date": "Fri. Dec 20, 2024",
-                "time": "7:00 PM",
-                "location": {
-                    "name": "Cornerstone Church",
-                    "address": "9303 Cameron Rd",
-                    "city": "Austin",
-                    "state": "TX",
-                    "zip": "78754"
-                },
-                "description": "Unwind and enjoy an evening of smooth jazz and live performances. Jazz Night promises a sophisticated atmosphere, exquisite tunes, and a chance to connect with fellow music lovers in a relaxed setting.",
-                "link": "www.google.com"
-              }
-        ]
-    }
-  ]
-  
-  
+  {
+    "futureEvents": [
+      {
+        "id": 1,
+        "title": "Workers Appreciation Event",
+        "date": "Sat. Dec 7, 2024",
+        "time": "5:00 PM",
+        "location": {
+          "name": "Wingate by Wyndham Round Rock Hotel",
+          "address": "1209 N Interstate Hwy 35",
+          "city": "Round Rock",
+          "state": "TX",
+          "zip": "78664"
+        },
+        "description": "Join us to celebrate and appreciate our amazing team for their hard work and dedication throughout the year. This special evening will include a delicious dinner, engaging activities, and heartfelt acknowledgments of everyone's contributions."
+      },
+      {
+        "id": 2,
+        "title": "Ignite Austin",
+        "date": "Fri. Dec 13, 2024",
+        "time": "7:30 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Experience a night of electrifying music, fun-filled activities, and connection at Ignite Austin. This event brings together vibrant communities to celebrate creativity, passion, and unity in the heart of the city."
+      },
+      {
+        "id": 3,
+        "title": "Jazz Night",
+        "date": "Fri. Dec 20, 2024",
+        "time": "7:00 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Unwind and enjoy an evening of smooth jazz and live performances. Jazz Night promises a sophisticated atmosphere, exquisite tunes, and a chance to connect with fellow music lovers in a relaxed setting."
+      }
+    ],
+    "pastEvents": [
+      {
+        "id": 1,
+        "title": "Sit-Down Lunch with Pastor",
+        "date": "Sun. Nov 10, 2024",
+        "time": "1:00 PM",
+        "location": {
+          "name": "Cornerstone Fellowship Hall",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A personal and informal gathering where attendees shared a meal with the pastor, asked questions, and engaged in meaningful discussions about faith and community."
+      },
+      {
+        "id": 2,
+        "title": "Evangelism Month",
+        "date": "Oct. 1 - Oct. 31, 2024",
+        "time": "Every Saturday, 10:00 AM - 2:00 PM",
+        "location": {
+          "name": "Various Locations Across Austin",
+          "address": "",
+          "city": "Austin",
+          "state": "TX",
+          "zip": ""
+        },
+        "description": "Throughout October 2024, we focused on spreading the gospel through outreach programs, community service, and spiritual engagements across Austin. Each week brought new opportunities to share the love of Christ."
+      },
+      {
+        "id": 3,
+        "title": "Arise Austin",
+        "date": "Fri. Aug 23, 2024",
+        "time": "6:00 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "An evening of powerful worship, prayer, and a transformative message to ignite faith and action within the Austin community."
+      },
+
+      {
+        "id": 4,
+        "title": "Church Building Dedication",
+        "date": "Sun. Jul 4, 202",
+        "time": "10:00 AM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A historic moment for our community as we dedicate the new church building. Join us for a spirit-filled service, ribbon-cutting ceremony, and a tour of the new facility."
+      },
+      {
+        "id": 5,
+        "title": "Watch Night Service",
+        "date": "Sun. Dec 31, 2023",
+        "time": "10:00 PM - 12:30 AM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Ring in the New Year with prayer, worship, and reflection. Join us as we thank God for the past year and look forward to His blessings in the new one."
+      },
+      {
+        "id": 6,
+        "title": "Christmas Choir Concert",
+        "date": "Fri. Dec 22, 2023",
+        "time": "6:00 PM",
+        "location": {
+          "name": "Cornerstone Church Sanctuary",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Celebrate the season with a beautiful evening of carols and performances by our talented church choir."
+      },
+      {
+        "id": 7,
+        "title": "Thanksgiving Service",
+        "date": "Thu. Nov 23, 2023",
+        "time": "10:00 AM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A heartfelt service of gratitude and praise as we reflect on God's blessings over the past year."
+      },
+      {
+        "id": 8,
+        "title": "Harvest Festival",
+        "date": "Fri. Oct 27, 2023",
+        "time": "5:00 PM - 9:00 PM",
+        "location": {
+          "name": "Cornerstone Church Grounds",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "An evening of family-friendly games, food, and fun celebrating the fall season with our community."
+      },
+      {
+        "id": 9,
+        "title": "Back-to-School Prayer Night",
+        "date": "Wed. Aug 23, 2023",
+        "time": "7:00 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A special evening dedicated to praying for students, teachers, and parents as they prepare for the new school year."
+      },
+      {
+        "id": 10,
+        "title": "Mission Trip Fundraiser Dinner",
+        "date": "Sat. Aug 12, 2023",
+        "time": "6:00 PM",
+        "location": {
+          "name": "Cornerstone Fellowship Hall",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Support our upcoming mission trip by joining us for a delicious dinner, silent auction, and updates on our mission efforts."
+      },
+      {
+        "id": 11,
+        "title": "Church Picnic",
+        "date": "Sat. Jul 15, 2023",
+        "time": "11:00 AM - 4:00 PM",
+        "location": {
+          "name": "Austin Community Park",
+          "address": "1234 Parkside Dr",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78704"
+        },
+        "description": "A day of fun, fellowship, and outdoor activities for the entire family. Bring your favorite dish to share!"
+      },
+      {
+        "id": 12,
+        "title": "Father's Day Breakfast",
+        "date": "Sun. Jun 18, 2023",
+        "time": "8:00 AM",
+        "location": {
+          "name": "Cornerstone Fellowship Hall",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Celebrate fathers with a hearty breakfast and special messages honoring their roles in our families and community."
+      },
+      {
+        "id": 13,
+        "title": "Vacation Bible School",
+        "date": "Mon. Jun 5 - Fri. Jun 9, 2023",
+        "time": "9:00 AM - 12:00 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A week of fun, learning, and spiritual growth for children as they engage in Bible lessons, crafts, and songs."
+      },
+      {
+        "id": 14,
+        "title": "Youth Worship Night",
+        "date": "Fri. Apr 21, 2023",
+        "time": "6:30 PM",
+        "location": {
+          "name": "Cornerstone Youth Center",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A night dedicated to youth-led worship, testimonies, and spiritual empowerment for young believers."
+      },
+      {
+        "id": 15,
+        "title": "Easter Sunday Service",
+        "date": "Sun. Apr 9, 2023",
+        "time": "10:00 AM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Celebrate the resurrection of Jesus Christ with a vibrant service featuring worship, a powerful sermon, and fellowship."
+      },
+      {
+        "id": 16,
+        "title": "Marriage Enrichment Seminar",
+        "date": "Sat. Mar 11, 2023",
+        "time": "10:00 AM - 2:00 PM",
+        "location": {
+          "name": "Cornerstone Fellowship Hall",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Strengthen your relationship through biblical teachings, practical advice, and interactive sessions designed for couples."
+      },
+      {
+        "id": 17,
+        "title": "Community Health Fair",
+        "date": "Sat. Feb 18, 2023",
+        "time": "9:00 AM - 3:00 PM",
+        "location": {
+          "name": "Cornerstone Church Parking Lot",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "Join us for free health check-ups, wellness workshops, and fitness sessions. Empowering our community to lead healthier lives in body and spirit."
+      },
+      {
+        "id": 18,
+        "title": "Revival Week",
+        "date": "Mon. Jan 9 - Sun. Jan 15, 2023",
+        "time": "7:00 PM",
+        "location": {
+          "name": "Cornerstone Church",
+          "address": "9303 Cameron Rd",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754"
+        },
+        "description": "A week of powerful worship, inspiring sermons, and life-changing prayer sessions aimed at spiritual renewal and community revival."
+      }
+    ]
+  }
+]
